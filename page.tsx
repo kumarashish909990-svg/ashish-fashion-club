@@ -1,0 +1,16 @@
+const products=[
+ {name:"Classic Oversized Shirt",price:"₹899",old:"₹1,499",tag:"BESTSELLER",img:"https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=700"},
+ {name:"Everyday Luxe Dress",price:"₹1,299",old:"₹1,999",tag:"TRENDING",img:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700"},
+ {name:"Urban Street Sneakers",price:"₹1,799",old:"₹2,499",tag:"NEW ARRIVAL",img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"},
+ {name:"Minimal Gold Watch",price:"₹1,499",old:"₹2,199",tag:"LIMITED DEAL",img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700"},
+ {name:"Premium Denim Jacket",price:"₹1,899",old:"₹2,799",tag:"EDITOR'S PICK",img:"https://images.unsplash.com/photo-1551028719-00167b16eac5?w=700"}
+];
+export default function Home(){
+ return <><div className="top">WELCOME TO ASHISH FASHION CLUB · FREE SHIPPING ON ORDERS ABOVE ₹1,499</div>
+ <nav className="nav"><a className="logo" href="/">ASHISH <span>FASHION CLUB</span></a><div className="navlinks"><a href="#categories">MEN</a><a href="#categories">WOMEN</a><a href="#categories">KIDS</a><a href="#categories">FOOTWEAR</a><a href="#categories">ACCESSORIES</a></div><div className="actions"><a href="/admin">ADMIN</a><a href="/account">ACCOUNT</a><a href="/cart">BAG (0)</a></div></nav>
+ <main><section className="hero"><div><div className="eyebrow">THE NEW SEASON COLLECTION</div><h1>Style that speaks for you.</h1><p>Discover everyday essentials, statement pieces and timeless styles curated for every version of you.</p><a className="goldbtn" href="#trending">SHOP THE COLLECTION</a></div></section>
+ <section className="section" id="categories"><div className="sectionhead"><div><div className="eyebrow">FIND YOUR STYLE</div><h2>Shop by category</h2></div><span className="muted">Explore the collection →</span></div><div className="categories">{["Men","Women","Kids","Footwear","Accessories"].map(x=><a className="cat" key={x} href="#trending">{x} <span> ↗</span></a>)}</div></section>
+ <section className="section" id="trending"><div className="sectionhead"><div><div className="eyebrow">CURATED FOR YOU</div><h2>Trending right now</h2></div><span className="muted">View all products →</span></div><div className="products">{products.map(p=><article className="product" key={p.name}><img src={p.img} alt={p.name}/><div className="pill">{p.tag}</div><h3>{p.name}</h3><p className="price">{p.price}<span className="old">{p.old}</span></p></article>)}</div></section>
+ <section className="banner"><div className="eyebrow">THE AFC PROMISE</div><h2>Good style. Great prices. Always.</h2><p className="muted">New drops, exclusive deals and wardrobe favourites.</p><a className="goldbtn" href="#trending">EXPLORE NOW</a></section></main>
+ <footer className="footer"><div><div className="logo">ASHISH <span>FASHION CLUB</span></div><p>Fashion for every day, every mood.</p></div><div>Customer Care<br/><br/>Contact · Shipping · Returns</div><div>Information<br/><br/>About Us · Privacy · Terms</div><div>© 2026 Ashish Fashion Club</div></footer></>;
+}
