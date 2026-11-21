@@ -1,0 +1,12 @@
+{
+  "name": "ashish-fashion-club",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {"dev":"next dev","build":"next build","start":"next start","lint":"next lint"},
+  "dependencies": {
+    "bcryptjs":"^2.4.3","cloudinary":"^2.5.1","jsonwebtoken":"^9.0.2",
+    "mongoose":"^8.9.5","next":"^15.1.4","razorpay":"^2.9.5",
+    "react":"^19.0.0","react-dom":"^19.0.0","zod":"^3.24.1"
+  },
+  "devDependencies":{"@types/bcryptjs":"^2.4.6","@types/jsonwebtoken":"^9.0.7","@types/node":"^22.10.5","@types/react":"^19.0.3","typescript":"^5.7.3"}
+}
